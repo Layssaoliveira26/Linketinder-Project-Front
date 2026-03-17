@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f3f3f3;
+}
+
+/* layout geral */
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* lado esquerdo */
+
+.left {
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* form */
+
+#formCandidato {
+    width: 450px;
+}
+
+#formCandidato h3 {
+    color: #e53935;
+    margin-bottom: 20px;
+}
+
+/* campos */
+
+#formCandidato div {
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 13px;
+    color: #444;
+}
+
+input,
+textarea,
+select {
+    border: none;
+    border-bottom: 2px solid #bbb;
+    background: transparent;
+    padding: 6px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-bottom: 2px solid #e53935;
+}
+
+/* botão */
+
+button {
+    margin-top: 10px;
+    background: #e53935;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* lado direito */
+
+.right {
+    width: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* área visual */
+
+.illustration {
+    width: 70%;
+    height: 60%;
+    background: linear-gradient(
+        120deg,
+        #f5f5f5,
+        #dddddd
+    );
+    border-radius: 20px;
+}
