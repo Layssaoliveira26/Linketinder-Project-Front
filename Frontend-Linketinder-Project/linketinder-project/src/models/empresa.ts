@@ -1,4 +1,4 @@
-class Empresa {
+export class Empresa {
     nome: string;
     emailCorporativo: string;
     cnpj: string;

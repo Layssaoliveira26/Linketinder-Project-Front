@@ -3,7 +3,9 @@ import type { tipoListaCandidatos } from "../types/tiposCandidato"
 let listaCandidados: tipoListaCandidatos = [];
 
 export function cadastrarCandidato(event?: any): void {
+
     event?.preventDefault()
+    
     let candidato = {
         nome: (document.getElementById('nomeCandidato') as HTMLInputElement).value,
         email: (document.getElementById('emailCandidato') as HTMLInputElement).value,
@@ -22,6 +24,7 @@ export function cadastrarCandidato(event?: any): void {
 }
 
 function limparFormCandidato(): void {
+
         (document.getElementById('nomeCandidato') as HTMLInputElement).value = '';
         (document.getElementById('emailCandidato') as HTMLInputElement).value = '';
         (document.getElementById('cpfCandidato') as HTMLInputElement).value = '';
@@ -30,6 +33,7 @@ function limparFormCandidato(): void {
         (document.getElementById('cepCandidato') as HTMLInputElement).value = '';
         (document.getElementById('descricaoCandidato') as HTMLTextAreaElement).value = '';
         (document.getElementById('competenciasCandidato') as HTMLSelectElement).value = '';
+
 }
 
 const formularioCandidato = document.getElementById("formCandidato") as HTMLFormElement;

@@ -20,20 +20,23 @@ body {
     justify-content: center;
 }
 
-/* form */
+/* form candidato + empresa */
 
-#formCandidato {
+#formCandidato,
+#formEmpresa {
     width: 450px;
 }
 
-#formCandidato h3 {
+#formCandidato h3,
+#formEmpresa h3 {
     color: #e53935;
     margin-bottom: 20px;
 }
 
 /* campos */
 
-#formCandidato div {
+#formCandidato div,
+#formEmpresa div {
     margin-bottom: 12px;
     display: flex;
     flex-direction: column;
@@ -52,6 +55,7 @@ select {
     background: transparent;
     padding: 6px;
     outline: none;
+    font-size: 14px;
 }
 
 input:focus,
@@ -70,12 +74,17 @@ button {
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #c62828;
 }
 
 /* lado direito */
 
 .right {
-    width: 60%;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,5 +100,14 @@ button {
         #f5f5f5,
         #dddddd
     );
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.illustration img {
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 20px;
 }

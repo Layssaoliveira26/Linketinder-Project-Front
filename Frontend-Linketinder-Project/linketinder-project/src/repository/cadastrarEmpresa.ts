@@ -1,37 +1,46 @@
-import type { tipoListaCandidatos } from "../types/tiposCandidato"
+import type { tipoListaEmpresas } from "../types/tiposEmpresa";
 
-let listaCandidados: tipoListaCandidatos = [];
+let listaEmpresas: tipoListaEmpresas = [];
 
-export function cadastrarCandidato(event?: any): void {
-    event?.preventDefault()
-    let candidato = {
-        nome: (document.getElementById('nomeCandidato') as HTMLInputElement).value,
-        email: (document.getElementById('emailCandidato') as HTMLInputElement).value,
-        cpf: (document.getElementById('cpfCandidato') as HTMLInputElement).value,
-        idade: (document.getElementById('idadeCandidato') as HTMLInputElement).value,
-        estado: (document.getElementById('estadoCandidato') as HTMLInputElement).value,
-        cep: (document.getElementById('cepCandidato') as HTMLInputElement).value,
-        descricaoPessoal: (document.getElementById('descricaoCandidato') as HTMLTextAreaElement).value,
-        competencias: (document.getElementById('competenciasCandidato') as HTMLSelectElement).value,
-    }
+export function cadastrarEmpresa(event?: Event): void {
 
-    listaCandidados.push(candidato);
-    console.log(listaCandidados)
-    limparFormCandidato();
+    event?.preventDefault();
+
+    let empresa = {
+
+        nome: (document.getElementById('nomeEmpresa') as HTMLInputElement).value,
+        emailCorporativo: (document.getElementById('emailEmpresa') as HTMLInputElement).value,
+        cnpj: (document.getElementById('cnpjEmpresa') as HTMLInputElement).value,
+        pais: (document.getElementById('paisEmpresa') as HTMLInputElement).value,
+        estado: (document.getElementById('estadoEmpresa') as HTMLInputElement).value,
+        cep: (document.getElementById('cepEmpresa') as HTMLInputElement).value,
+        descricaoEmpresa: (document.getElementById('descricaoEmpresa') as HTMLTextAreaElement).value
+
+    };
+
+    listaEmpresas.push(empresa);
+    console.log(listaEmpresas);
+    limparFormEmpresa();
+}
+
+
+function limparFormEmpresa(): void {
+
+    (document.getElementById('nomeEmpresa') as HTMLInputElement).value = '';
+    (document.getElementById('emailEmpresa') as HTMLInputElement).value = '';
+    (document.getElementById('cnpjEmpresa') as HTMLInputElement).value = '';
+    (document.getElementById('paisEmpresa') as HTMLInputElement).value = '';
+    (document.getElementById('estadoEmpresa') as HTMLInputElement).value = '';
+    (document.getElementById('cepEmpresa') as HTMLInputElement).value = '';
+    (document.getElementById('descricaoEmpresa') as HTMLTextAreaElement).value = '';
 
 }
 
-function limparFormCandidato(): void {
-        (document.getElementById('nomeCandidato') as HTMLInputElement).value = '';
-        (document.getElementById('emailCandidato') as HTMLInputElement).value = '';
-        (document.getElementById('cpfCandidato') as HTMLInputElement).value = '';
-        (document.getElementById('idadeCandidato') as HTMLInputElement).value = '';
-        (document.getElementById('estadoCandidato') as HTMLInputElement).value = '';
-        (document.getElementById('cepCandidato') as HTMLInputElement).value = '';
-        (document.getElementById('descricaoCandidato') as HTMLTextAreaElement).value = '';
-        (document.getElementById('competenciasCandidato') as HTMLSelectElement).value = '';
-}
 
-const formularioCandidato = document.getElementById("formCandidato") as HTMLFormElement;
+const formularioEmpresa =
+    document.getElementById("formEmpresa") as HTMLFormElement;
 
-formularioCandidato.addEventListener("submit", cadastrarCandidato);
+formularioEmpresa.addEventListener(
+    "submit",
+    cadastrarEmpresa
+);

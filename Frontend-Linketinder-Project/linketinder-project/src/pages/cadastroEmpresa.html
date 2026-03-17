@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Candidato</title>
+    <title>Cadastro de Empresa</title>
 
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -13,53 +13,42 @@
 <div class="container">
 
     <div class="left">
-
-        <form id="formCandidato">
-
-            <h3>Cadastro de Candidato</h3>
+        <form id="formEmpresa">
+            <h3>Cadastro de Empresa</h3>
 
             <div>
-                <label>Nome:</label>
-                <input type="text" id="nomeCandidato" placeholder="Digite seu nome completo">
+                <label>Nome da empresa:</label>
+                <input type="text" id="nomeEmpresa" placeholder="Digite o nome da empresa">
             </div>
 
             <div>
-                <label>E-mail:</label>
-                <input type="text" id="emailCandidato" placeholder="Informe seu e-mail">
+                <label>Email corporativo:</label>
+                <input type="text" id="emailEmpresa" placeholder="Informe o email">
             </div>
 
             <div>
-                <label>CPF:</label>
-                <input type="number" id="cpfCandidato" placeholder="Somente números">
+                <label>CNPJ:</label>
+                <input type="text" id="cnpjEmpresa" placeholder="Somente números">
             </div>
 
             <div>
-                <label>Idade:</label>
-                <input type="number" id="idadeCandidato">
+                <label>País:</label>
+                <input type="text" id="paisEmpresa">
             </div>
 
             <div>
                 <label>Estado:</label>
-                <input type="text" id="estadoCandidato">
+                <input type="text" id="estadoEmpresa">
             </div>
 
             <div>
                 <label>CEP:</label>
-                <input type="text" id="cepCandidato">
+                <input type="text" id="cepEmpresa">
             </div>
 
             <div>
-                <label>Descrição Pessoal:</label>
-                <textarea id="descricaoCandidato"></textarea>
-            </div>
-
-            <div>
-                <label>Competências:</label>
-                <select id="competenciasCandidato">
-                    <option>Java</option>
-                    <option>Javascript</option>
-                    <option>Python</option>
-                </select>
+                <label>Descrição da empresa:</label>
+                <textarea id="descricaoEmpresa"></textarea>
             </div>
 
             <button type="submit">Cadastrar</button>
@@ -68,20 +57,17 @@
 
     </div>
 
-
     <div class="right">
 
         <div class="illustration">
-            <img src="../../public/candidates.jpg" alt="">  
+            <img src="../../public/empresa.jpg" alt="">
         </div>
 
     </div>
 
-
 </div>
 
-
-<script type="module" src="/src/repository/cadastrarCandidato.ts"></script>
+<script type="module" src="/src/repository/cadastrarEmpresa.ts"></script>
 
 </body>
 </html>
