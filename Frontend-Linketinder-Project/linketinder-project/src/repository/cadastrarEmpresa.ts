@@ -37,10 +37,6 @@ function limparFormEmpresa(): void {
 }
 
 
-const formularioEmpresa =
-    document.getElementById("formEmpresa") as HTMLFormElement;
+const formularioEmpresa = document.getElementById("formEmpresa") as HTMLFormElement;
 
-formularioEmpresa.addEventListener(
-    "submit",
-    cadastrarEmpresa
-);
+formularioEmpresa.addEventListener("submit", cadastrarEmpresa);

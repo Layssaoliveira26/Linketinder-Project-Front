@@ -111,3 +111,86 @@ button:hover {
     max-height: 100%;
     border-radius: 20px;
 }
+
+.containerLista {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 30px;
+}
+
+.containerLista h2 {
+    color: #e53935;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* área dos cards */
+
+#listaCandidatos, #listaVagas {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* card */
+
+.undCandidato {
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 20px 25px;
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+
+    border-left: 8px solid #e53935;
+
+    transition: 0.25s;
+
+}
+
+/* hover moderno */
+
+.undCandidato:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 18px rgba(0,0,0,0.12);
+
+}
+
+/* título */
+
+.undCandidato h4 {
+
+    margin: 0 0 10px 0;
+
+    color: #e53935;
+
+    font-size: 18px;
+
+}
+
+/* textos */
+
+.undCandidato p {
+
+    margin: 4px 0;
+
+    font-size: 14px;
+
+    color: #555;
+
+}
+
+/* layout interno opcional */
+
+.undCandidato p span {
+
+    font-weight: bold;
+
+    color: #222;
+
+}

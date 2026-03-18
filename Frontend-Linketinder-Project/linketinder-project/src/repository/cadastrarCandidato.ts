@@ -1,11 +1,11 @@
 import type { tipoListaCandidatos } from "../types/tiposCandidato"
 
-let listaCandidados: tipoListaCandidatos = [];
+export let listaCandidados: tipoListaCandidatos = [];
 
 export function cadastrarCandidato(event?: any): void {
 
     event?.preventDefault()
-    
+
     let candidato = {
         nome: (document.getElementById('nomeCandidato') as HTMLInputElement).value,
         email: (document.getElementById('emailCandidato') as HTMLInputElement).value,
@@ -14,6 +14,7 @@ export function cadastrarCandidato(event?: any): void {
         estado: (document.getElementById('estadoCandidato') as HTMLInputElement).value,
         cep: (document.getElementById('cepCandidato') as HTMLInputElement).value,
         descricaoPessoal: (document.getElementById('descricaoCandidato') as HTMLTextAreaElement).value,
+        formacaoAcademica: (document.getElementById('formacaoCandidato') as HTMLTextAreaElement).value,
         competencias: (document.getElementById('competenciasCandidato') as HTMLSelectElement).value,
     }
 
@@ -32,10 +33,21 @@ function limparFormCandidato(): void {
         (document.getElementById('estadoCandidato') as HTMLInputElement).value = '';
         (document.getElementById('cepCandidato') as HTMLInputElement).value = '';
         (document.getElementById('descricaoCandidato') as HTMLTextAreaElement).value = '';
+        (document.getElementById('formacaoCandidato') as HTMLTextAreaElement).value = '';
         (document.getElementById('competenciasCandidato') as HTMLSelectElement).value = '';
 
 }
 
-const formularioCandidato = document.getElementById("formCandidato") as HTMLFormElement;
+// const formularioCandidato = document.getElementById("formCandidato") as HTMLFormElement;
 
-formularioCandidato.addEventListener("submit", cadastrarCandidato);
+// formularioCandidato.addEventListener("submit", cadastrarCandidato);
+
+const formularioCandidato =
+    document.getElementById("formCandidato") as HTMLFormElement | null;
+
+if (formularioCandidato) {
+    formularioCandidato.addEventListener(
+        "submit",
+        cadastrarCandidato
+    );
+}
