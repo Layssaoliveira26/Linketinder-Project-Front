@@ -23,6 +23,39 @@ listaCandidados.push(
         descricaoPessoal: "",
         formacaoAcademica: "",
         competencias: "Java"
+    },
+    {
+        nome: "Joao",
+        email: "joao@email.com",
+        cpf: "450",
+        idade: "30",
+        estado: "CE",
+        cep: "000",
+        descricaoPessoal: "",
+        formacaoAcademica: "",
+        competencias: "Java"
+    },
+    {
+        nome: "Luiz",
+        email: "luiz@email.com",
+        cpf: "458",
+        idade: "30",
+        estado: "CE",
+        cep: "000",
+        descricaoPessoal: "",
+        formacaoAcademica: "",
+        competencias: "Python"
+    },
+    {
+        nome: "Lucia",
+        email: "lucia@email.com",
+        cpf: "480",
+        idade: "30",
+        estado: "CE",
+        cep: "000",
+        descricaoPessoal: "",
+        formacaoAcademica: "",
+        competencias: "Python"
     }
 );
 
