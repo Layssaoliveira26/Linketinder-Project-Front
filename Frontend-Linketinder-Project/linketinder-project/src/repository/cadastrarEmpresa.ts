@@ -1,4 +1,6 @@
 import type { tipoListaEmpresas } from "../types/tiposEmpresa";
+import { validarCEP } from "../vallidators/validadorCEP";
+import { validadorEmail } from "../vallidators/validadorEmail";
 
 let listaEmpresas: tipoListaEmpresas = [];
 
@@ -6,7 +8,11 @@ export function cadastrarEmpresa(event?: Event): void {
 
     event?.preventDefault();
 
-    let empresa = {
+    const emailValido = validadorEmail((document.getElementById('emailEmpresa') as HTMLInputElement).value);
+    const cepValido = validarCEP((document.getElementById('cepEmpresa') as HTMLInputElement).value);
+        
+    if(emailValido && cepValido) {
+        let empresa = {
 
         nome: (document.getElementById('nomeEmpresa') as HTMLInputElement).value,
         emailCorporativo: (document.getElementById('emailEmpresa') as HTMLInputElement).value,
@@ -19,6 +25,8 @@ export function cadastrarEmpresa(event?: Event): void {
     };
 
     listaEmpresas.push(empresa);
+    }
+
     console.log(listaEmpresas);
     limparFormEmpresa();
 }

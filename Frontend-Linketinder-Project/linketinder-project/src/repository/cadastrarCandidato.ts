@@ -12,12 +12,12 @@ export function cadastrarCandidato(event?: any): void {
     // if(validacoesFormulario) {
 
     // }
-    validadorCPF((document.getElementById('cpfCandidato') as HTMLInputElement).value);
-    validadorEmail((document.getElementById('emailCandidato') as HTMLInputElement).value);
-    validarCEP((document.getElementById('cepCandidato') as HTMLInputElement).value);
+    const cpfValido = validadorCPF((document.getElementById('cpfCandidato') as HTMLInputElement).value);
+    const emailValido = validadorEmail((document.getElementById('emailCandidato') as HTMLInputElement).value);
+    const cepValido = validarCEP((document.getElementById('cepCandidato') as HTMLInputElement).value);
     
-
-    let candidato = {
+    if(cpfValido && emailValido && cepValido) {
+        let candidato = {
         nome: (document.getElementById('nomeCandidato') as HTMLInputElement).value,
         email: (document.getElementById('emailCandidato') as HTMLInputElement).value,
         cpf: (document.getElementById('cpfCandidato') as HTMLInputElement).value,
@@ -30,6 +30,8 @@ export function cadastrarCandidato(event?: any): void {
     }
 
     listaCandidados.push(candidato);
+    }
+    
     console.log(listaCandidados)
     limparFormCandidato();
 
