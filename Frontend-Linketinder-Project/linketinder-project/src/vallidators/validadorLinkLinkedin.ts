@@ -1,0 +1,1 @@
+const areaLinkedin = document.getElementsByClassName('areaCEPCandidato')[0] as HTMLElement;

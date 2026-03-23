@@ -1,10 +1,21 @@
 import type { tipoListaCandidatos } from "../types/tiposCandidato"
+import { validarCEP } from "../vallidators/validadorCEP";
+import { validadorCPF } from "../vallidators/validadorCPF";
+import { validadorEmail } from "../vallidators/validadorEmail";
 
 export let listaCandidados: tipoListaCandidatos = [];
 
 export function cadastrarCandidato(event?: any): void {
 
     event?.preventDefault()
+
+    // if(validacoesFormulario) {
+
+    // }
+    validadorCPF((document.getElementById('cpfCandidato') as HTMLInputElement).value);
+    validadorEmail((document.getElementById('emailCandidato') as HTMLInputElement).value);
+    validarCEP((document.getElementById('cepCandidato') as HTMLInputElement).value);
+    
 
     let candidato = {
         nome: (document.getElementById('nomeCandidato') as HTMLInputElement).value,

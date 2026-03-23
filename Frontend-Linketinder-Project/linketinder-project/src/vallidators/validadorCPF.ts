@@ -1,13 +1,11 @@
-const regexCPF: number[] = [0-9];
-const cpf = document.getElementById('cpfCandidato');
+const regexCPF = /^[0-9]{11}$/;
+const areaCPF = document.getElementsByClassName('areaCPFCandidato')[0] as HTMLElement;
 
-function validadorCPF(cpf: any) {
+export function validadorCPF(cpf: any) {
     if(!cpf.match(regexCPF)) {
-        alert("cpf deve incluir apenas números")
+        areaCPF.innerHTML = "Informe um CPF em um formato válido";
     }
-    if(cpf.length != 11) {
-        alert("cpf deve ter exatamente 11 dígitos")
-    }
+    
         
 }
 

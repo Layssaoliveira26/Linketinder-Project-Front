@@ -24,11 +24,13 @@
             <div>
                 <label>E-mail:</label>
                 <input type="text" id="emailCandidato" placeholder="Informe seu e-mail">
+                <div class="areaEmailCandidato"></div>
             </div>
 
             <div>
                 <label>CPF:</label>
                 <input type="number" id="cpfCandidato" placeholder="Somente números">
+                <div class="areaCPFCandidato"></div>
             </div>
 
             <div>
@@ -44,6 +46,7 @@
             <div>
                 <label>CEP:</label>
                 <input type="text" id="cepCandidato">
+                <div class="areaCEPCandidato"></div>
             </div>
 
             <div>
@@ -85,6 +88,6 @@
 
 
 <script type="module" src="/src/repository/cadastrarCandidato.ts"></script>
-<script src="../vallidators/validadorCPF.ts"></script>
+<script type="module" src="../vallidators/validadorCPF.ts"></script>
 </body>
 </html>

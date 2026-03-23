@@ -194,3 +194,7 @@ button:hover {
     color: #222;
 
 }
+
+.areaCPFCandidato, .areaEmailCandidato, .areaCEPCandidato {
+    color:#c62828;
+}
